@@ -11,6 +11,9 @@
 		70C005311E897FCE00E37180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C0052F1E897FCE00E37180 /* Main.storyboard */; };
 		70C005331E897FCE00E37180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C005321E897FCE00E37180 /* Assets.xcassets */; };
 		70C005361E897FCE00E37180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C005341E897FCE00E37180 /* LaunchScreen.storyboard */; };
+		70C005441E89805D00E37180 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C005431E89805D00E37180 /* CloudKit.framework */; };
+		70C005461E8984F700E37180 /* Cloudkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005451E8984F700E37180 /* Cloudkit.swift */; };
+		70C005481E898D3000E37180 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005471E898D3000E37180 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,10 @@
 		70C005321E897FCE00E37180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70C005351E897FCE00E37180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70C005371E897FCE00E37180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70C005411E89804700E37180 /* instaClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = instaClone.entitlements; sourceTree = "<group>"; };
+		70C005431E89805D00E37180 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		70C005451E8984F700E37180 /* Cloudkit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudkit.swift; sourceTree = "<group>"; };
+		70C005471E898D3000E37180 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C005441E89805D00E37180 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,7 +45,9 @@
 			isa = PBXGroup;
 			children = (
 				70C0052A1E897FCE00E37180 /* instaClone */,
+				70C005491E8990F600E37180 /* Utilities */,
 				70C005291E897FCE00E37180 /* Products */,
+				70C005421E89805D00E37180 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +82,7 @@
 		70C0053E1E897FE400E37180 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				70C005411E89804700E37180 /* instaClone.entitlements */,
 				70C0052B1E897FCE00E37180 /* AppDelegate.swift */,
 				70C005321E897FCE00E37180 /* Assets.xcassets */,
 				70C005371E897FCE00E37180 /* Info.plist */,
@@ -82,6 +93,7 @@
 		70C0053F1E897FEC00E37180 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				70C005471E898D3000E37180 /* HomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -91,6 +103,23 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		70C005421E89805D00E37180 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70C005431E89805D00E37180 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70C005491E8990F600E37180 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				70C005451E8984F700E37180 /* Cloudkit.swift */,
+			);
+			name = Utilities;
+			path = instaClone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +156,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QB9VT5PHVK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -166,7 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C005461E8984F700E37180 /* Cloudkit.swift in Sources */,
 				70C0052C1E897FCE00E37180 /* AppDelegate.swift in Sources */,
+				70C005481E898D3000E37180 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = instaClone/instaClone.entitlements;
 				DEVELOPMENT_TEAM = QB9VT5PHVK;
 				INFOPLIST_FILE = instaClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -302,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = instaClone/instaClone.entitlements;
 				DEVELOPMENT_TEAM = QB9VT5PHVK;
 				INFOPLIST_FILE = instaClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
