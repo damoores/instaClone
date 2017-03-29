@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yF4-sJ-FsS">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Transition View Controller-->
+        <scene sceneID="Ns7-iN-tXM">
+            <objects>
+                <viewController id="yF4-sJ-FsS" customClass="TransitionViewController" customModule="instaClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zqf-uk-XIG"/>
+                        <viewControllerLayoutGuide type="bottom" id="59D-KT-cfi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fLL-rV-kA4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trouble" translatesAutoresizingMaskIntoConstraints="NO" id="3Ag-ez-Yus">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Having trouble mustering up the motivation to go on? We can help." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pW-oj-YXW">
+                                <rect key="frame" x="20" y="161" width="374" height="21"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KyV-px-vwq" appends="YES" id="uAz-Ub-u2P"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="5pW-oj-YXW" firstAttribute="centerX" secondItem="3Ag-ez-Yus" secondAttribute="centerX" id="0C8-J3-HPK"/>
+                            <constraint firstAttribute="trailing" secondItem="5pW-oj-YXW" secondAttribute="trailing" constant="20" id="3ua-Ox-saP"/>
+                            <constraint firstItem="3Ag-ez-Yus" firstAttribute="top" secondItem="5pW-oj-YXW" secondAttribute="bottom" constant="-182" id="DzC-0d-lkf"/>
+                            <constraint firstItem="3Ag-ez-Yus" firstAttribute="height" secondItem="fLL-rV-kA4" secondAttribute="height" id="I61-Dw-EmZ"/>
+                            <constraint firstItem="3Ag-ez-Yus" firstAttribute="width" secondItem="fLL-rV-kA4" secondAttribute="width" id="Ir6-v1-UNP"/>
+                            <constraint firstItem="3Ag-ez-Yus" firstAttribute="centerX" secondItem="fLL-rV-kA4" secondAttribute="centerX" id="TMT-Du-th4"/>
+                            <constraint firstItem="3Ag-ez-Yus" firstAttribute="centerY" secondItem="fLL-rV-kA4" secondAttribute="centerY" id="sww-2V-Akd"/>
+                            <constraint firstItem="5pW-oj-YXW" firstAttribute="leading" secondItem="fLL-rV-kA4" secondAttribute="leading" constant="20" id="umP-A3-Exv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="demotivationalLabel" destination="5pW-oj-YXW" id="vTs-gs-CKF"/>
+                        <outlet property="imageView" destination="3Ag-ez-Yus" id="CS8-sv-ddE"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="HomeViewController" id="1WT-Vl-dHy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="woI-jF-jsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KyV-px-vwq">
+                    <connections>
+                        <action selector="labelTapped:" destination="yF4-sJ-FsS" id="Ko2-R4-eie"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-684" y="40"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="instaClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="HomeViewController" customModule="instaClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,13 +82,35 @@
                                     <outletCollection property="gestureRecognizers" destination="FP9-hX-Muf" appends="YES" id="iAW-5W-v7q"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZY-nn-h1P">
+                                <rect key="frame" x="52.333333333333343" y="54" width="310.66666666666663" height="30"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Post Image"/>
+                                <connections>
+                                    <action selector="postButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QeU-mA-J5T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-d2-R3Y">
+                                <rect key="frame" x="51.666666666666657" y="652" width="310.66666666666663" height="30"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Filter Image"/>
+                                <connections>
+                                    <action selector="filterButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bh-14-xLY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="CWH-d2-R3Y" firstAttribute="top" secondItem="XPZ-2E-tBl" secondAttribute="bottom" constant="8" id="4fW-r9-M4o"/>
+                            <constraint firstItem="XPZ-2E-tBl" firstAttribute="top" secondItem="7ZY-nn-h1P" secondAttribute="bottom" constant="8" id="Tpo-91-8ud"/>
                             <constraint firstItem="XPZ-2E-tBl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="TqK-0g-eil"/>
+                            <constraint firstItem="CWH-d2-R3Y" firstAttribute="centerX" secondItem="XPZ-2E-tBl" secondAttribute="centerX" id="ayR-Ta-MaH"/>
+                            <constraint firstItem="CWH-d2-R3Y" firstAttribute="width" secondItem="XPZ-2E-tBl" secondAttribute="width" id="c3H-BT-rgs"/>
                             <constraint firstItem="XPZ-2E-tBl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dU4-eK-7KC"/>
                             <constraint firstItem="XPZ-2E-tBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="deU-HY-Ren"/>
+                            <constraint firstItem="7ZY-nn-h1P" firstAttribute="width" secondItem="XPZ-2E-tBl" secondAttribute="width" id="g3z-Nc-3ud"/>
                             <constraint firstItem="XPZ-2E-tBl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="i5O-8K-j3J"/>
+                            <constraint firstItem="7ZY-nn-h1P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nKi-yg-AM2"/>
                         </constraints>
                     </view>
                     <connections>
@@ -53,5 +128,6 @@
     </scenes>
     <resources>
         <image name="Balls" width="419" height="507"/>
+        <image name="Trouble" width="617" height="435"/>
     </resources>
 </document>

@@ -12,8 +12,12 @@
 		70C005331E897FCE00E37180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C005321E897FCE00E37180 /* Assets.xcassets */; };
 		70C005361E897FCE00E37180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C005341E897FCE00E37180 /* LaunchScreen.storyboard */; };
 		70C005441E89805D00E37180 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C005431E89805D00E37180 /* CloudKit.framework */; };
-		70C005461E8984F700E37180 /* Cloudkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005451E8984F700E37180 /* Cloudkit.swift */; };
+		70C005461E8984F700E37180 /* CloudkitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005451E8984F700E37180 /* CloudkitAPI.swift */; };
 		70C005481E898D3000E37180 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005471E898D3000E37180 /* HomeViewController.swift */; };
+		70C0054B1E89B07200E37180 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0054A1E89B07200E37180 /* TransitionViewController.swift */; };
+		70C005511E8AD0EA00E37180 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005501E8AD0EA00E37180 /* Post.swift */; };
+		70C005531E8AD36400E37180 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005521E8AD36400E37180 /* UIExtensions.swift */; };
+		70C005551E8AE77100E37180 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005541E8AE77100E37180 /* Filters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +29,12 @@
 		70C005371E897FCE00E37180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70C005411E89804700E37180 /* instaClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = instaClone.entitlements; sourceTree = "<group>"; };
 		70C005431E89805D00E37180 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		70C005451E8984F700E37180 /* Cloudkit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudkit.swift; sourceTree = "<group>"; };
+		70C005451E8984F700E37180 /* CloudkitAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudkitAPI.swift; sourceTree = "<group>"; };
 		70C005471E898D3000E37180 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		70C0054A1E89B07200E37180 /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		70C005501E8AD0EA00E37180 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		70C005521E8AD36400E37180 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		70C005541E8AE77100E37180 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				70C005471E898D3000E37180 /* HomeViewController.swift */,
+				70C0054A1E89B07200E37180 /* TransitionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -101,6 +110,7 @@
 		70C005401E897FF400E37180 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70C005501E8AD0EA00E37180 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -116,7 +126,9 @@
 		70C005491E8990F600E37180 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				70C005451E8984F700E37180 /* Cloudkit.swift */,
+				70C005451E8984F700E37180 /* CloudkitAPI.swift */,
+				70C005521E8AD36400E37180 /* UIExtensions.swift */,
+				70C005541E8AE77100E37180 /* Filters.swift */,
 			);
 			name = Utilities;
 			path = instaClone;
@@ -203,9 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C005461E8984F700E37180 /* Cloudkit.swift in Sources */,
+				70C005551E8AE77100E37180 /* Filters.swift in Sources */,
+				70C005461E8984F700E37180 /* CloudkitAPI.swift in Sources */,
 				70C0052C1E897FCE00E37180 /* AppDelegate.swift in Sources */,
 				70C005481E898D3000E37180 /* HomeViewController.swift in Sources */,
+				70C005531E8AD36400E37180 /* UIExtensions.swift in Sources */,
+				70C0054B1E89B07200E37180 /* TransitionViewController.swift in Sources */,
+				70C005511E8AD0EA00E37180 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +387,7 @@
 				70C0053C1E897FCE00E37180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
