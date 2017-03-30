@@ -11,10 +11,17 @@ import CloudKit
 
 struct Post {
     let image: UIImage
+    let date: Date
     
-    init(image: UIImage) {
-        self.image = image
+    static var identifier: String {
+        return String(describing: self)
     }
+    
+    init(image: UIImage, date: Date = Date()) {
+        self.image = image
+        self.date = date
+    }
+    
 }
 
 enum PostError: Error {
@@ -33,10 +40,19 @@ extension Post {
             let asset = CKAsset(fileURL: post.image.path)
             let record = CKRecord(recordType: "Post")
             record.setValue(asset, forKey: "image")
+            record.setValue(post.date, forKey: "date")
             return record
         } catch {
             throw PostError.writingDataToDisk
         }
     }
     
+    init?(fromRecord: CKRecord) {
+        guard let asset = fromRecord["image"] as? CKAsset else { return nil }
+        let path = asset.fileURL.path
+        guard let image = UIImage(contentsOfFile: path)  else { return nil }
+        guard let date = fromRecord["date"] as? Date else { return nil }
+        self.init(image: image, date: date)
+    }
+
 }

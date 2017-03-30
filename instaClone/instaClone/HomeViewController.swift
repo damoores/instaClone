@@ -17,10 +17,9 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
 //        self.view.alpha = 0.0
         Filters.originalImage = self.imageView.image!
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func viewDidAppear(_ animated: Bool) {

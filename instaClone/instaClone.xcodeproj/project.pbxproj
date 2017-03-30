@@ -18,6 +18,9 @@
 		70C005511E8AD0EA00E37180 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005501E8AD0EA00E37180 /* Post.swift */; };
 		70C005531E8AD36400E37180 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005521E8AD36400E37180 /* UIExtensions.swift */; };
 		70C005551E8AE77100E37180 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C005541E8AE77100E37180 /* Filters.swift */; };
+		70D4E4DE1E8C237000DD7C0C /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D4E4DD1E8C237000DD7C0C /* GalleryViewController.swift */; };
+		70D4E4E01E8C277C00DD7C0C /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D4E4DF1E8C277C00DD7C0C /* GalleryCell.swift */; };
+		70D4E4E21E8C37D800DD7C0C /* GalleryCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D4E4E11E8C37D800DD7C0C /* GalleryCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		70C005501E8AD0EA00E37180 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		70C005521E8AD36400E37180 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		70C005541E8AE77100E37180 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		70D4E4DD1E8C237000DD7C0C /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		70D4E4DF1E8C277C00DD7C0C /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		70D4E4E11E8C37D800DD7C0C /* GalleryCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				70C0052A1E897FCE00E37180 /* instaClone */,
-				70C005491E8990F600E37180 /* Utilities */,
 				70C005291E897FCE00E37180 /* Products */,
 				70C005421E89805D00E37180 /* Frameworks */,
 			);
@@ -70,6 +75,7 @@
 		70C0052A1E897FCE00E37180 /* instaClone */ = {
 			isa = PBXGroup;
 			children = (
+				70C005491E8990F600E37180 /* Utilities */,
 				70C0053E1E897FE400E37180 /* Global */,
 				70C005401E897FF400E37180 /* Model */,
 				70C0053D1E897FDB00E37180 /* View */,
@@ -81,6 +87,7 @@
 		70C0053D1E897FDB00E37180 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70D4E4DF1E8C277C00DD7C0C /* GalleryCell.swift */,
 				70C0052F1E897FCE00E37180 /* Main.storyboard */,
 				70C005341E897FCE00E37180 /* LaunchScreen.storyboard */,
 			);
@@ -101,8 +108,10 @@
 		70C0053F1E897FEC00E37180 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				70C005471E898D3000E37180 /* HomeViewController.swift */,
 				70C0054A1E89B07200E37180 /* TransitionViewController.swift */,
+				70C005471E898D3000E37180 /* HomeViewController.swift */,
+				70D4E4DD1E8C237000DD7C0C /* GalleryViewController.swift */,
+				70D4E4E11E8C37D800DD7C0C /* GalleryCollectionViewLayout.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -131,7 +140,6 @@
 				70C005541E8AE77100E37180 /* Filters.swift */,
 			);
 			name = Utilities;
-			path = instaClone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +226,11 @@
 				70C005551E8AE77100E37180 /* Filters.swift in Sources */,
 				70C005461E8984F700E37180 /* CloudkitAPI.swift in Sources */,
 				70C0052C1E897FCE00E37180 /* AppDelegate.swift in Sources */,
+				70D4E4E21E8C37D800DD7C0C /* GalleryCollectionViewLayout.swift in Sources */,
+				70D4E4E01E8C277C00DD7C0C /* GalleryCell.swift in Sources */,
 				70C005481E898D3000E37180 /* HomeViewController.swift in Sources */,
 				70C005531E8AD36400E37180 /* UIExtensions.swift in Sources */,
+				70D4E4DE1E8C237000DD7C0C /* GalleryViewController.swift in Sources */,
 				70C0054B1E89B07200E37180 /* TransitionViewController.swift in Sources */,
 				70C005511E8AD0EA00E37180 /* Post.swift in Sources */,
 			);
